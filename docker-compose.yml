@@ -1,0 +1,24 @@
+services:
+  rag-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ELASTICSEARCH_URL=${ELASTICSEARCH_URL}
+      - ELASTICSEARCH_TOP_K=5
+      - ELASTICSEARCH_MIN_SCORE=0.0
+      - CHAT_MODEL=gpt-4o-mini
+      - EMBEDDING_MODEL=text-embedding-3-small
+      - EMBEDDING_DIMS=1536
+      - MAX_CONTEXT_TOKENS=3000
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+volumes:
+  es-data:
+
+networks:
+  rag-network:
+    driver: bridge
