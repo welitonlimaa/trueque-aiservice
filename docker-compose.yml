@@ -1,5 +1,6 @@
 services:
-  rag-service:
+  trueque-aiservice:
+    container_name: trueque-aiservice
     build: .
     ports:
       - "8000:8000"
@@ -14,11 +15,11 @@ services:
       - MAX_CONTEXT_TOKENS=3000
     restart: unless-stopped
     networks:
-      - rag-network
+      - trueque-network
 
 volumes:
   es-data:
 
 networks:
-  rag-network:
-    driver: bridge
+  trueque-network:
+    external: true
