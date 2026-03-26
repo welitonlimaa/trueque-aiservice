@@ -1,0 +1,22 @@
+name: Deploy service
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+          script: |
+            cd ${{ secrets.EC2_PATH }}
+            git pull origin main
+            docker compose down
+            docker compose up -d --build
