@@ -11,7 +11,7 @@ class QueryRequest(BaseModel):
         default=None, ge=1, le=20, description="Número de documentos a recuperar"
     )
     min_score: Optional[float] = Field(
-        default=None, ge=0.0, le=1.0, description="Score mínimo de similaridade"
+        default=None, ge=1.0, le=2.0, description="Score mínimo de similaridade"
     )
     filters: Optional[dict] = Field(
         default=None, description="Filtros opcionais (category, condition, type)"

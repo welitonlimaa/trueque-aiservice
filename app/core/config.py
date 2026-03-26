@@ -3,6 +3,8 @@ from functools import lru_cache
 
 
 class Settings(BaseSettings):
+    API_URL: str
+
     # OpenAI
     OPENAI_API_KEY: str
 
