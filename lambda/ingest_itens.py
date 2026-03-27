@@ -21,6 +21,8 @@ mapping = {
             "category": {"type": "keyword"},
             "condition": {"type": "keyword"},
             "type": {"type": "keyword"},
+            "id": {"type": "keyword"},
+            "link": {"type": "keyword"},
             "embedding": {
                 "type": "dense_vector",
                 "dims": 1536,
@@ -68,14 +70,17 @@ def generate_embedding(text):
 def transform_product(p):
     text = f"""
     item: {p.get('title', '')}
+    id: {p.get("id"), ''}
     Descrição: {p.get('description', '')}
     Categoria: {p.get('category', '')}
     Condição: {p.get('condition', '')}
+    link: https://truequeapp.welitonlima.com/listings/{p.get("id"), ''}
     """
 
     return {
         "text": text,
         "id": p.get("id"),
+        "link": f"https://truequeapp.welitonlima.com/listings/{p.get("id")}",
         "category": p.get("category"),
         "condition": p.get("condition"),
         "type": "item",
