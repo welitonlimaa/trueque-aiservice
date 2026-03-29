@@ -8,22 +8,6 @@ Serviço de **Retrieval-Augmented Generation (RAG)** construído com **FastAPI +
 
 <img width="1370" height="740" alt="Image" src="https://github.com/user-attachments/assets/f218ed8e-e154-4199-83cb-13670f133ef6" />
 
-```
-User pergunta
-     ↓
-POST /api/v1/query
-     ↓
-EmbeddingService       →  text-embedding-3-small (1536 dims)
-     ↓
-ElasticsearchService   →  KNN cosine similarity search
-     ↓
-ContextBuilder         →  Monta contexto com limite de tokens
-     ↓
-GenerationService      →  gpt-4o-mini
-     ↓
-QueryResponse          →  answer + sources + tokens_used
-```
-
 ---
 
 ## Estrutura do Projeto
