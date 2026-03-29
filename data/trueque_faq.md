@@ -2,7 +2,7 @@
 
 ## Sobre a plataforma
 
-### O que é a Trueque?
+### O que é a Trueque? Sobre o que é a Plataforma Trueque? Quem são vocês?
 A Trueque é uma plataforma de troca de itens onde não há uso de dinheiro. O objetivo é promover a reutilização de bens, reduzir desperdícios e incentivar uma economia mais sustentável e colaborativa.
 
 ### Qual é a proposta da Trueque?
