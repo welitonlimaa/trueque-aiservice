@@ -47,19 +47,6 @@ Copie o arquivo de exemplo e preencha:
 cp .env.example .env
 ```
 
-| Variável | Padrão | Descrição |
-|---|---|---|
-| `OPENAI_API_KEY` | — | **Obrigatório** |
-| `EMBEDDING_MODEL` | `text-embedding-3-small` | Modelo de embedding |
-| `CHAT_MODEL` | `gpt-4o-mini` | Modelo de geração |
-| `EMBEDDING_DIMS` | `1536` | Dimensões do embedding |
-| `ELASTICSEARCH_URL` | `http://elasticsearch:9200` | URL do ES |
-| `ELASTICSEARCH_TOP_K` | `5` | Documentos recuperados |
-| `ELASTICSEARCH_MIN_SCORE` | `0.6` | Score mínimo de similaridade |
-| `MAX_CONTEXT_TOKENS` | `3000` | Limite de tokens no contexto |
-
----
-
 ## Execução
 
 ### Com Docker Compose (recomendado)
