@@ -1,7 +1,10 @@
 # RAG AI Service
 
 Serviço de **Retrieval-Augmented Generation (RAG)** construído com **FastAPI + OpenAI + Elasticsearch**.
-
+---
+* Frontend: [https://github.com/welitonlimaa/trueque-frontend](https://github.com/welitonlimaa/trueque-frontend)
+* Backend: [https://github.com/welitonlimaa/trueque-api](https://github.com/welitonlimaa/trueque-api)
+* AiService: [https://github.com/welitonlimaa/trueque-aiservice](https://github.com/welitonlimaa/trueque-aiservice)
 ---
 
 ## Arquitetura do Pipeline
